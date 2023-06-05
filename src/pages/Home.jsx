@@ -2,12 +2,15 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { selectPosts } from '../redux/selectors';
 import { LOAD_POSTS } from "../redux/actions/posts";
-import { PostList } from "../components/index";
+import { Filters, PostList } from "../components/index";
 
 export const Home = () => {
   const postsData = useSelector(selectPosts);
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
+  const [searchQueryTitle, setSearchQueryTitle] = useState('');
+  const [sortQuery, setSortQuery] = useState('title');
+
 
   useEffect(() => {
     dispatch({
@@ -15,12 +18,21 @@ export const Home = () => {
       payload: {
         page: page,
         limit: postsData.limit,
+        postTitle: searchQueryTitle.trim(),
+        sortPosts: sortQuery,
       }
     })
-  }, [page])
+  }, [page, searchQueryTitle, sortQuery])
 
   return (
     <>
+      <Filters
+        searchQueryTitle={searchQueryTitle}
+        setSearchQueryTitle={setSearchQueryTitle}
+        sortQuery={sortQuery}
+        setSortQuery={setSortQuery}
+        setPage={setPage}
+      />
       <PostList
         posts={postsData.posts}
         loading={postsData.loading}

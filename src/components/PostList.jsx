@@ -9,6 +9,14 @@ export const PostList = ({ posts, loading, title, page, setPage }) => {
     )
   }
 
+  if (!posts.data.length) {
+    return (
+      <h2>
+        Посты не найдены!
+      </h2>
+    )
+  }
+
   return (
     <>
       <h4>
