@@ -1,0 +1,2 @@
+export const LOAD_COMMENTS = "LOAD_COMMENTS";
+export const SET_COMMENTS = "SET_COMMENTS";

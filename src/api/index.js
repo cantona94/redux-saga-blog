@@ -8,3 +8,5 @@ export const axiosPostsFromApi = (page, limit, postTitle, sortPosts) => axios.ge
     _sort: sortPosts,
   }
 });
+
+export const axiosCommentsFromApi = (postId) => axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);

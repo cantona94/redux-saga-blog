@@ -5,3 +5,5 @@ export { PaginationPages } from './PaginationPages';
 export { Filters } from './Filters';
 export { SearchPostTitle } from './SearchPostTitle';
 export { SortPosts } from './SortPosts';
+export { CommentsBlock } from './CommentsBlock';
+export { CommentsItem } from './CommentsItem';
