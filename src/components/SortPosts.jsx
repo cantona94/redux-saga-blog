@@ -12,6 +12,7 @@ export const SortPosts = ({ sortQuery, setSortQuery, setPage }) => {
       <Form.Select aria-label="Floating label select example"
         value={sortQuery} onChange={handleChangeSort}
       >
+        <option value="">Initial</option>
         <option value="title">Title</option>
         <option value="body">Text</option>
       </Form.Select>

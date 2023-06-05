@@ -9,8 +9,7 @@ export const Home = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
   const [searchQueryTitle, setSearchQueryTitle] = useState('');
-  const [sortQuery, setSortQuery] = useState('title');
-
+  const [sortQuery, setSortQuery] = useState('');
 
   useEffect(() => {
     dispatch({
