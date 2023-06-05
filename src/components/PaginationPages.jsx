@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectPosts } from '../redux/reducers/selectors';
+import { selectPosts } from '../redux/selectors';
 import Pagination from 'react-bootstrap/Pagination';
 import { getPageCount, getPagesArray } from '../utils/pagination';
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { selectPosts } from '../redux/reducers/selectors';
-import { LOAD_POSTS } from "../redux/reducers/posts/actions";
+import { selectPosts } from '../redux/selectors';
+import { LOAD_POSTS } from "../redux/actions/posts";
 import { PostList } from "../components/index";
 
 export const Home = () => {

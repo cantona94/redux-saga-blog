@@ -1,5 +1,5 @@
 import { put, takeEvery, call, delay } from "redux-saga/effects";
-import { LOAD_POSTS, SET_POSTS } from "../reducers/posts/actions";
+import { LOAD_POSTS, SET_POSTS } from "../actions/posts";
 import { axiosPostsFromApi } from "../../api/index";
 
 function* axiosPostWorker({ payload }) {

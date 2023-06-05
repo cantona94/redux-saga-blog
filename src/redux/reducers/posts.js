@@ -1,4 +1,4 @@
-import { LOAD_POSTS, SET_POSTS } from './actions';
+import { LOAD_POSTS, SET_POSTS } from '../actions/posts';
 
 const defaultState = {
   posts: [],
