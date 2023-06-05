@@ -16,3 +16,18 @@ body {
   margin: 0 auto;
   text-align: center;
 }
+
+.pagination {
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.page-link {
+  color: #6c757d !important;
+}
+
+.active #page_item_link {
+  color: white;
+  background: #b2b8be;
+  border-color: #6c757d;
+}

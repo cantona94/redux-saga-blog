@@ -1,19 +1,23 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { selectPosts } from '../redux/reducers/selectors';
 import { LOAD_POSTS } from "../redux/reducers/posts/actions";
-import { PostList } from "../components/PostList";
+import { PostList } from "../components/index";
 
 export const Home = () => {
   const postsData = useSelector(selectPosts);
   const dispatch = useDispatch();
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     dispatch({
       type: LOAD_POSTS,
-      payload: {}
+      payload: {
+        page: page,
+        limit: postsData.limit,
+      }
     })
-  }, [])
+  }, [page])
 
   return (
     <>
@@ -21,6 +25,8 @@ export const Home = () => {
         posts={postsData.posts}
         loading={postsData.loading}
         title={'Users posts'}
+        page={page}
+        setPage={setPage}
       />
     </>
   )

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Home, About } from "./pages/index";
-import { Header } from "./components/Header";
+import { Header } from "./components/index";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {

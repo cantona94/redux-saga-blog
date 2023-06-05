@@ -1,7 +1,7 @@
-import { PostItem } from './PostItem';
+import { PostItem, PaginationPages } from './index';
 import Spinner from 'react-bootstrap/Spinner';
 
-export const PostList = ({ posts, loading, title }) => {
+export const PostList = ({ posts, loading, title, page, setPage }) => {
 
   if (loading) {
     return (
@@ -15,6 +15,7 @@ export const PostList = ({ posts, loading, title }) => {
         {title}
       </h4>
       {posts.data.map(post => <PostItem post={post} key={post.id} />)}
+      <PaginationPages page={page} setPage={setPage} />
     </>
   )
 }
