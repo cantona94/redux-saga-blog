@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 import { CommentsBlock } from './index';
 import avatar from '../assets/avatar.png';
@@ -14,6 +15,12 @@ export const PostItem = ({ post }) => {
     ? 'Hide'
     : 'Show';
 
+  const navigate = useNavigate()
+
+  const handleOpenPostsUser = () => {
+    navigate(`/user/${post.userId}`)
+  }
+
   return (
     <Card className='p-3 mb-3'>
       <Card.Title>
@@ -21,7 +28,11 @@ export const PostItem = ({ post }) => {
       </Card.Title>
       <Row>
         <Col className='col-md-2 col-12'>
-          <Card.Img style={{ width: '150px', height: '150px' }} src={avatar} />
+          <Card.Img
+            style={{ width: '150px', height: '150px', cursor: 'pointer' }}
+            src={avatar}
+            onClick={handleOpenPostsUser}
+          />
         </Col>
         <Col className='col-md-10 col-12'>
           <Card.Body className='p-4'>

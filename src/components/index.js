@@ -7,3 +7,4 @@ export { SearchPostTitle } from './SearchPostTitle';
 export { SortPosts } from './SortPosts';
 export { CommentsBlock } from './CommentsBlock';
 export { CommentsItem } from './CommentsItem';
+export { UserCard } from './UserCard';
