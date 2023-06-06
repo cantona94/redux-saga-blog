@@ -1,7 +1,18 @@
 import { PostItem, PaginationPages } from './index';
 import Spinner from 'react-bootstrap/Spinner';
+import { useSelector } from 'react-redux';
+import { selectErrors } from '../redux/selectors';
 
 export const PostList = ({ posts, loading, title, page, setPage }) => {
+  const errors = useSelector(selectErrors);
+
+  if (errors.postsError) {
+    return (
+      <h2>
+        {errors.postsError}
+      </h2>
+    )
+  }
 
   if (loading) {
     return (

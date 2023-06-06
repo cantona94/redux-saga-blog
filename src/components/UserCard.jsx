@@ -1,8 +1,19 @@
 import React from 'react'
+import { useSelector } from 'react-redux';
 import { Spinner, Card, Row, Col } from 'react-bootstrap';
+import { selectErrors } from '../redux/selectors';
 import avatar from '../assets/avatar.png';
 
 export const UserCard = ({ user, loading }) => {
+  const errors = useSelector(selectErrors);
+
+  if (errors.usersError) {
+    return (
+      <h2>
+        {errors.usersError}
+      </h2>
+    )
+  }
 
   if (loading) {
     return (

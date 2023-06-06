@@ -2,12 +2,13 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import Spinner from 'react-bootstrap/Spinner';
 import { CommentsItem } from './index';
-import { selectComments } from '../redux/selectors';
+import { selectComments, selectErrors } from '../redux/selectors';
 import { LOAD_COMMENTS } from "../redux/actions/comments";
 
 export const CommentsBlock = ({ postId }) => {
   const dispatch = useDispatch();
   const commentsData = useSelector(selectComments);
+  const errors = useSelector(selectErrors);
 
   const addedPostComments = Object.keys(commentsData.comments).map(key => {
     return commentsData.comments[key];
@@ -21,6 +22,14 @@ export const CommentsBlock = ({ postId }) => {
       }
     })
   }, [])
+
+  if (errors.commentsError) {
+    return (
+      <h6>
+        {errors.commentsError}
+      </h6>
+    )
+  }
 
   return (
     <>{(commentsData.loading)

@@ -11,7 +11,7 @@ export const axiosPostsFromApi = (page, limit, postTitle, sortPosts) => axios.ge
 
 export const axiosCommentsFromApi = (postId) => axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`);
 
-export const axiosUsersFromApi = (userId) => axios.get(`https://jsonplaceholder.typicode.com/users`, {
+export const axiosUserFromApi = (userId) => axios.get(`https://jsonplaceholder.typicode.com/users`, {
   params: {
     id: userId,
   }
