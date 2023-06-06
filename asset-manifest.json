@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-saga-blog/static/css/main.59b5fa3a.css",
+    "main.js": "/react-saga-blog/static/js/main.8395fa09.js",
+    "static/media/myAvatar.png": "/react-saga-blog/static/media/myAvatar.1ea9a7fcfa37f9dedfc1.png",
+    "static/media/avatar.png": "/react-saga-blog/static/media/avatar.527ef42fff2a66821bd3.png",
+    "index.html": "/react-saga-blog/index.html",
+    "main.59b5fa3a.css.map": "/react-saga-blog/static/css/main.59b5fa3a.css.map",
+    "main.8395fa09.js.map": "/react-saga-blog/static/js/main.8395fa09.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59b5fa3a.css",
+    "static/js/main.8395fa09.js"
+  ]
+}
