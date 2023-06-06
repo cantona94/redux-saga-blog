@@ -1,15 +1,9 @@
-import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ROUTES } from '../routes';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+import { Container, Nav, Navbar, Offcanvas, Card } from 'react-bootstrap';
+import myAvatar from '../assets/myAvatar.png';
 
 export const Header = () => {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   const localion = useLocation();
 
   return (
@@ -24,21 +18,33 @@ export const Header = () => {
                 8.5H14.5A.5.5 0 0 0 15 8z" />
             </svg>
           </Navbar.Toggle>}
-        <Navbar.Toggle onClick={handleShow} />
-        <Navbar.Brand className='ms-auto' as={Link} to={ROUTES.HOME}>Blog</Navbar.Brand>
-        <Navbar.Offcanvas show={show} onHide={handleClose}>
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>
-              Blog Menu
-            </Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link onClick={handleClose} as={Link} to={ROUTES.HOME}>Home</Nav.Link>
-              <Nav.Link onClick={handleClose} as={Link} to={ROUTES.ABOUT}>About</Nav.Link>
+        <Navbar.Toggle />
+        <Navbar.Brand className='ms-auto' as={Link} to="/">Blog</Navbar.Brand>
+        <Navbar.Collapse placement={'top'} id="navbar-nav">
+          <Offcanvas.Header />
+          <Offcanvas.Body className='d-flex justify-content-between'>
+            <Nav className='p-3'>
+              <Nav.Link className='text-start' as={Link} to={ROUTES.HOME}>
+                Home
+              </Nav.Link>
+              <Nav.Link className='text-start' as={Link} to={ROUTES.ABOUT}>
+                About me
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Card.Img
+                style={{ width: '70px', height: '70px', margin: 'auto' }}
+                src={myAvatar}
+              />
+              <Offcanvas.Body >
+                Vladimir Staninov
+              </Offcanvas.Body>
+              <Offcanvas.Body>
+                Email: vlstan@mail.ru
+              </Offcanvas.Body>
             </Nav>
           </Offcanvas.Body>
-        </Navbar.Offcanvas>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   )

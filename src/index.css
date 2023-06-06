@@ -11,6 +11,11 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  text-align: left;
+  margin: 0 35px;
+}
+
 .App {
   max-width: 900px;
   margin: 0 auto;
@@ -31,4 +36,9 @@ body {
   color: white;
   background: #b2b8be;
   border-color: #6c757d;
+}
+
+#navbar-nav {
+  max-width: 880px;
+  margin: 0 auto;
 }
