@@ -7,10 +7,10 @@ import avatar from '../assets/avatar.png';
 export const UserCard = ({ user, loading }) => {
   const errors = useSelector(selectErrors);
 
-  if (errors.usersError) {
+  if (errors.userError) {
     return (
       <h2>
-        {errors.usersError}
+        {errors.userError}
       </h2>
     )
   }

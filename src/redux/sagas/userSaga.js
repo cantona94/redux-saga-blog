@@ -8,10 +8,10 @@ function* axiosUserWorker({ payload }) {
     yield delay(500);
     const { userId } = payload;
     const data = yield call(axiosUserFromApi, userId);
-    const users = yield call(() => new Promise(res => res(data)))
+    const user = yield call(() => new Promise(res => res(data)))
     yield put({
       type: SET_USER,
-      payload: users.data,
+      payload: user.data,
     });
   } catch {
     yield put({ type: SET_USER_ERROR, payload: 'Error fetching user card' })

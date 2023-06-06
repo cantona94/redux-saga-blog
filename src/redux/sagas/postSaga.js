@@ -6,8 +6,8 @@ import { axiosPostsFromApi } from "../../api/index";
 function* axiosPostWorker({ payload }) {
   try {
     yield delay(500);
-    const { page, limit, postTitle, sortPosts } = payload;
-    const data = yield call(axiosPostsFromApi, page, limit, postTitle, sortPosts);
+    const { page, limit, postTitle, sortPosts, userId } = payload;
+    const data = yield call(axiosPostsFromApi, page, limit, postTitle, sortPosts, userId);
     const posts = yield call(() => new Promise(res => res(data)))
     yield put({
       type: SET_POSTS,

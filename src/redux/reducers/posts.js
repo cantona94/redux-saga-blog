@@ -6,19 +6,21 @@ const defaultState = {
   limit: 3,
   postTitle: '',
   sortPosts: '',
+  userId: null,
   loading: true
 }
 
 export default function postReducer(state = defaultState, action) {
   switch (action.type) {
     case LOAD_POSTS:
-      const { page, limit, postTitle, sortPosts } = action.payload;
+      const { page, limit, postTitle, sortPosts, userId } = action.payload;
       return {
         ...state,
         page,
         limit,
         postTitle,
         sortPosts,
+        userId,
         loading: true,
       }
     case SET_POSTS:

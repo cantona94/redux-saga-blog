@@ -21,7 +21,7 @@ export default function errorReducer(state = initialState, { type, payload }) {
     case SET_USER_ERROR:
       return {
         ...state,
-        usersError: payload,
+        userError: payload,
       };
     default: return state;
   }
