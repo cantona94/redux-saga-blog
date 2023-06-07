@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/redux-saga-blog/static/css/main.59b5fa3a.css",
-    "main.js": "/redux-saga-blog/static/js/main.1c8ce53c.js",
+    "main.js": "/redux-saga-blog/static/js/main.740d9e87.js",
     "static/media/myAvatar.png": "/redux-saga-blog/static/media/myAvatar.1ea9a7fcfa37f9dedfc1.png",
     "static/media/avatar.png": "/redux-saga-blog/static/media/avatar.527ef42fff2a66821bd3.png",
     "index.html": "/redux-saga-blog/index.html",
     "main.59b5fa3a.css.map": "/redux-saga-blog/static/css/main.59b5fa3a.css.map",
-    "main.1c8ce53c.js.map": "/redux-saga-blog/static/js/main.1c8ce53c.js.map"
+    "main.740d9e87.js.map": "/redux-saga-blog/static/js/main.740d9e87.js.map"
   },
   "entrypoints": [
     "static/css/main.59b5fa3a.css",
-    "static/js/main.1c8ce53c.js"
+    "static/js/main.740d9e87.js"
   ]
 }
