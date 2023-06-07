@@ -25,8 +25,6 @@ export const UserPosts = () => {
     })
   }, [page])
 
-  console.log(postsData)
-
   return (
     <>
       <UserCard user={userData.user[0]} loading={userData.loading} />
