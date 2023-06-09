@@ -13,11 +13,10 @@ const defaultState = {
 export default function postReducer(state = defaultState, action) {
   switch (action.type) {
     case LOAD_POSTS:
-      const { page, limit, postTitle, sortPosts, userId } = action.payload;
+      const { page, postTitle, sortPosts, userId } = action.payload;
       return {
         ...state,
         page,
-        limit,
         postTitle,
         sortPosts,
         userId,

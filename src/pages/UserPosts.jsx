@@ -20,7 +20,6 @@ export const UserPosts = () => {
       payload: {
         userId: params.userId,
         page: page,
-        limit: postsData.limit,
       }
     })
   }, [page])

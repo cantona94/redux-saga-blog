@@ -10,7 +10,7 @@ export const About = () => {
         I study modern technology stacks and read specialized channels and websites.
       </p>
       <p>
-        I have a specialized higher education. Developed several projects in React JS, .
+        I have a specialized higher education. Developed several projects in React JS.
         I have experience in backend development in Python/Django.
         Actively looking for an opportunity to prove myself in a team of professionals,
         whose ideals are the development of a quality product and continuous development.

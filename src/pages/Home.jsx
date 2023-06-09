@@ -16,7 +16,6 @@ export const Home = () => {
       type: LOAD_POSTS,
       payload: {
         page: page,
-        limit: postsData.limit,
         postTitle: searchQueryTitle.trim(),
         sortPosts: sortQuery,
       }
